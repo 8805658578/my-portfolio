@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import profile from "../assets/AbhirajP.jpg";
 import pdf from "../public/AbhiResumeUpdate.pdf";
 
@@ -15,7 +16,7 @@ export default function Hero() {
 
         {/* Profile */}
         <motion.div
-          className="flex justify-center"
+          className="flex flex-col items-center"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1 }}
@@ -27,6 +28,29 @@ export default function Hero() {
             animate={{ y: [0, -15, 0] }}
             transition={{ duration: 4, repeat: Infinity }}
           />
+
+          {/* Social Buttons */}
+          <div className="flex gap-6 mt-6">
+
+            <a
+              href="https://github.com/8805658578"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-gray-800 p-3 rounded-full hover:bg-gray-700 transition"
+            >
+              <FaGithub size={24} />
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/abhirajchangan/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-blue-600 p-3 rounded-full hover:bg-blue-700 transition"
+            >
+              <FaLinkedin size={24} />
+            </a>
+
+          </div>
         </motion.div>
 
         {/* Text */}
